@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 const bookingsRouter = require('./routes/bookings');
-const port = process.env.PORT || 80
+const PORT = process.env.PORT || 5000
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -35,6 +35,6 @@ app.use((err, req, res, next) => {
   res.render('error', {err});
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at {port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening at ${PORT}`)
 })
