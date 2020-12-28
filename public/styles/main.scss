@@ -80,7 +80,6 @@ html, body {
     width: 90%;
     left: 5%;
     text-align: center;
-    z-index: 20;
 }
 
 .content h4 {
@@ -202,7 +201,6 @@ html, body {
     left: 50%;
     transform: translate(-50%, 0);
     border: 0.3rem solid $flag-red;
-    z-index: 99;
 }
 
 #modal-window h2 {

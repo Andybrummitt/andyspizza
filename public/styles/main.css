@@ -780,7 +780,6 @@ iframe {
   width: 90%;
   left: 5%;
   text-align: center;
-  z-index: 20;
 }
 
 .content h4 {
@@ -931,7 +930,6 @@ iframe {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   border: 0.3rem solid #cd212a;
-  z-index: 99;
 }
 
 #modal-window h2 {
