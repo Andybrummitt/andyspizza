@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Authentic Italian Cuisine in Chelmsford, Essex">
+    <meta name="keywords" content="andy's pizzas, italian restaurant, pizza, pasta, pizza chelmsford" > 
+    <script src="https://kit.fontawesome.com/a34572993a.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Andy's Pizzas</title>
+</head>
+<body id="home">
+    <div id="modal-window" class="hide">
+        <h2>Attention</h2>
+        <p>This is a website for a fake company used for development practice. Submission of the form with a validated email address will send a mock confirmation email. No data is stored server-side. Feedback is appreciated at andyspizzamockapp@outlook.com.</p> 
+        <p>Thanks</p>
+        <button class="btn" id="modal-btn">Got it</button>
+    </div>
+    <header id="header-main">
+        <div class="nav-container bg-light">
+            <nav class="navbar-main">
+                <h1 class="title"><a href="#home">Andy's Pizzas</a></h1>
+                <div id="hb-container">
+                    <div class="hb-bar"></div>
+                    <div class="hb-bar"></div>
+                    <div class="hb-bar"></div>
+                </div>
+                <ul id="nav-links-ul" class="bg-light hide-nav-links">
+                    <li><a href="#about-us-anchor" id="about-us-link" class="nav-link">About Us</a></li>
+                    <li><a href="/menu" class="nav-link">Menu</a></li>
+                    <li><a href="#book-table-anchor" id="book-table-link" class="nav-link">Book a Table</a></li>
+                    <li><a href="#find-us-anchor" id="find-us-link" class="nav-link">Find Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="hero-img">
+            <div class="content">
+                <h4>Authentic Italian Cuisine</h4>
+                <a href="/menu" class="btn btn-green">View Menu</a>
+            </div>
+        </div> 
+    </header>
+
+    <section id="about-us">
+        <div id="about-us-anchor"></div>
+        <h2>About Us</h2>
+        <div class="flex-items">
+            <div class="info">
+                <div class="figure-img chef-img"></div>
+                <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quae ab mollitia rerum quia ex non aspernatur nemo harum. Temporibus quo minus sed repellat aliquid eius laudantium error dolore perferendis, culpa, eveniet nihil, maxime deleniti corrupti autem assumenda optio quos perspiciatis!</p>
+            </div>
+            <div class="info">
+                <div class="figure-img calzone-img"></div>
+                <p class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi debitis ullam delectus! Inventore ipsam, sequi beatae dolores asperiores vitae magni iure molestiae minima enim et recusandae itaque dolorum accusamus nihil deleniti aut expedita possimus cupiditate, dolore nesciunt minus. Nostrum, maxime!</p>
+            </div>
+        </div>
+        <h3>Est. 1962</h3>
+    </section>
+    
+    <section id="book-table" class="bg-primary">
+        <div id="book-table-anchor"></div>
+        <div class="form-container">
+            <h2>Book a Table</h2>
+            <form action="/bookings/book-table", method="POST">
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input type="text" placeholder="Full name" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea name="message" placeholder="Date and time of required table" rows="4" id="message"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email"></label>
+                    <input type="text" placeholder="Email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone"></label>
+                    <input type="tel" placeholder="Phone number" name="phone" id="phone">   
+                </div>
+                <button type="submit" id="submit-btn" class="btn btn-green">Send Request</button>
+                <div id="validation-error-msg" class="hide">
+                    <p>Please check highlighted input fields and try again</p>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <section id="find-us">
+        <div id="find-us-anchor"></div>
+        <h2>Find Us</h2>
+        <div class="find-us-container">
+            <div class="iframe-container">
+                <iframe
+                    src="https://www.google.com/maps/embed/v1/place?key=<%= mapsAPIKey %>
+                    &q=Pizza+Hut, Chelmsford" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="address">
+                <h4>Address</h4>
+                <p>Andy's Pizza<br>
+                Chelmer Village Retail Park,<br>
+                Unit 11, Chelmer Village Way,<br>
+                Chelmsford<br>
+                CM2 6XE</p>
+            </div>
+            <div class="location-info">
+                <div class="info-group">
+                    <h4>Free Parking</h4>
+                    <i class="fas fa-parking"></i>
+                </div>
+                <div class="info-group">
+                    <h4>15 Minutes from Train Station</h4>
+                    <i class="fas fa-train"></i>
+                </div>
+                <div class="info-group">
+                    <h4>Free Secure Wifi</h4>
+                    <i class="fas fa-wifi"></i>
+                </div>
+            </div>  
+        </div>
+    </section>
+   
+    <footer id="main-footer">
+        <div class="main-footer-container">
+            <p class="copyright">Andy's Pizza &#169; Est. 1962</p>
+            <p class="phone-number">01245 876000</p>
+            <div class="join-social-media">
+                <p>Join Us on Social Media</p>
+                <div class="social-media-icons">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-youtube-square"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./dist/main.js"></script>
+</body>
+</html>

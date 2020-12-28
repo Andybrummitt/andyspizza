@@ -1,0 +1,55 @@
+//  BACKGROUNDS
+.bg-light {
+    background: $bg-light;
+    color: $dark-text;
+}
+
+.bg-primary {
+    background: #cd212a;
+    color: #ffffff;
+}
+
+//  HIDES AND DISPLAYS
+
+.hide-nav-links {
+    transform: translateX(-100vw);
+    transition: 400ms ease;
+}
+
+.show-nav-links {
+    transform: translateX(0);
+    transition: 400ms ease;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media screen and (min-width: 768px){
+    .hide-nav-links {
+        transform: translateX(0);
+    }
+}
+
+//  BUTTON CLASSES
+
+.btn {
+    text-decoration: none;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+.btn-green {
+    background: $flag-green;
+    color: white;
+}
+
+.btn-green:hover {
+    background: $btn-green-hover;
+    transition: 0.2s ease;
+}
+
+.flex-items {
+    @include flexCenter(column);
+}

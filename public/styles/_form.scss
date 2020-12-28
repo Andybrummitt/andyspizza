@@ -1,0 +1,96 @@
+//  FORM
+#book-table {
+    @include flexCenter(column);
+    position: relative;
+}
+
+#book-table h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin: 1rem;
+}
+
+.form-container {
+    width: 100%;
+    margin: 2rem 1rem;
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.form-container h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 2rem;
+}
+
+form input, form textarea, form button {
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin: 0.8rem;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+    @include flexCenter(column);
+}
+
+.form-container button {
+    align-self: center;
+}
+
+@media screen and (min-width: 550px) {
+    .form-container h3 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1028px){
+    .form-container label, 
+    .form-container input, 
+    .form-container textarea, 
+    .form-container button {
+        font-size: 1.5rem;
+    }
+} 
+
+//  ERRORS
+.validation-error {
+    border: 0.2rem solid #FFF720;
+    background: white;
+}
+
+#validation-error-msg {
+    margin-top: 1rem;
+    background: #FFF720;
+    width: 80%;
+    color: black;
+    font-family: $error-font;
+    padding: 0.1rem;
+    align-self: center;
+    text-align: center;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#validation-error-msg p {
+    padding: 0.8rem;
+    border: 2px solid black;
+    border-radius: 0.2rem;
+}
+
+@media screen and (min-width: 1024px){
+    #validation-error-msg {
+        font-size: 1.3rem;
+    }
+}

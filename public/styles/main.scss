@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Rubik&display=swap');
+
+//  Variables 
+$bg-light: #EDEDED;
+$dark-text: #333;
+$flag-green: #008C45;
+$flag-red: #cd212a;
+$flag-white: #f4f5f0;
+$btn-green-hover: #016e37;
+$title-font: 'Pacifico', cursive;
+$error-font: 'Anonymous Pro', monospace;
+
+//  Mixins
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    }
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6rem;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+
+}
+
+@import '_utilities.scss';
+@import '_navbar.scss';
+@import '_about-us.scss';
+@import '_form.scss';
+@import '_find-us.scss';
+@import '_footer.scss';
+
+#header-main {
+    height: 100vh;
+    width: 100vw;
+}
+
+//  HERO IMAGE AND OVERLAY
+.hero-img {
+    position: relative;
+    top: 15vh;
+    width: 100vw;
+    height: 85vh;
+    background: url('/images/hero-img.jpg') no-repeat center center/cover;
+    z-index: -2;
+}
+
+.hero-img::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: black;
+    opacity: 0.7;
+}
+
+.content {
+    position: absolute;
+    top: 50vh;
+    opacity: 1;
+    margin: auto;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    z-index: 10;
+}
+
+.content h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+}
+
+@media screen and (min-width: 450px) {
+    .content h4 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-img {
+        background: url('/images/hero-img-landscape.jpg') no-repeat center center/cover;
+        top: 10vh;
+        height: 90vh;
+    }
+
+    .content h4 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+    }
+
+    .content .btn {
+        font-size: 1.5rem;
+    }
+}
+
+//  ------------------    /BOOKINGS PATH PAGES    ---------------------------
+
+//  BOOKING CONFIRMATION PAGE
+.booking-confirmation {
+    margin: 1.5rem;
+    @include flexCenter(column);
+    text-align: center;
+}
+
+.booking-confirmation h1 {
+    line-height: 2rem;
+    color: #333;
+    font-size: 2rem;
+    font-family: $title-font;
+    margin: 3rem 1rem;
+}
+
+.booking-confirmation p {
+    margin: 1rem 0;
+}
+
+.booking-confirmation a {
+    text-decoration: none;
+    margin: auto;
+}
+
+.buon-appetito {
+    font-family: $title-font;
+    font-size: 1.5rem;
+}
+
+//  ERROR PAGE
+.error-content {
+    margin: 1.5rem;
+    @include flexCenter(column);
+    text-align: center;
+}
+
+.error-content h1 {
+    line-height: 2rem;
+    color: #333;
+    font-size: 2rem;
+    font-family: $title-font;
+    margin: 3rem 1rem;
+}
+
+.error-content h2 {
+    color: red;
+}
+
+.error-content p {
+    margin: 1rem 0;
+}
+
+.error-content a {
+    text-decoration: none;
+    margin: auto;
+}
+
+//  FOOTERS
+.booking-footer, .error-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+@media screen and (min-height: 500px){
+    .booking-footer, .error-footer {
+        position: absolute;     
+    }
+}
+
+//  MODAL WINDOW
+#modal-window {
+    position: fixed;
+    top: 10%;
+    margin: auto;
+    width: 90vw;
+    background: white;
+    z-index: 20;
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    @include flexCenter(column);
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 0.3rem solid $flag-red;
+}
+
+#modal-window h2 {
+    text-align: center;
+    font-size: 2em;
+    line-height: 2em;
+}
+
+#modal-window p {
+    font-size: 1em;
+    margin-top: 0.7em;
+}
+
+#modal-btn {
+    background: $flag-green;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    margin: 1em;
+}
+
+//   VERY SMALL PHONES
+@media screen and (max-width: 330px){
+    #modal-window {
+        padding: 0.3rem;
+    }
+    #modal-window p {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-height: 400px){
+    #modal-window {
+        top: 0;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #modal-window {
+        font-size: 1.2rem;
+        line-height: 1.5rem
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #modal-window {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #modal-window {
+        width: 60vw;
+        max-width: 1000px;
+    }
+}   

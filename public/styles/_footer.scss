@@ -1,0 +1,40 @@
+#main-footer {
+    background: $flag-green;
+    color: white;
+    line-height: 2rem;
+    padding: 1rem;
+}
+
+.main-footer-container {
+    width: 80%;
+    margin: auto;
+    @include flexCenter(column);
+    justify-content: space-between;
+    text-align: center;
+}
+
+.social-media-icons i {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 540px) {
+    .main-footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .copyright, .phone-number {
+        flex: 50%;
+    } 
+    .join-social-media {
+        flex: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-footer-container {
+        flex-direction: row;
+    }
+    .copyright, .phone-number, .join-social-media {
+        flex: 33.3%;
+    } 
+}

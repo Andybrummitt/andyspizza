@@ -1,0 +1,96 @@
+//  ABOUT US SECTION
+
+#about-us {
+    margin: 5%;
+    position: relative;
+}
+
+#about-us h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+#about-us .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.figure-img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+.chef-img {
+    background: url('/images/chef.jpg') no-repeat 50% 50%/cover;
+}
+
+.calzone-img {
+    background: url('/images/calzone.jpg') no-repeat 50% 50%/cover;
+}
+
+.info p {
+    text-align: justify;
+    margin: 1.5rem 0;
+}
+
+#about-us h3 {
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+    #about-us .info {
+        display: flex;
+        flex-direction: row;
+    }
+    .figure-img {
+        position: absolute;
+        top: 8%;
+        height: 16rem;
+        width: 16rem;
+    }
+    .calzone-img {
+        left: 10%;  
+    }
+    .chef-img {
+        right: 10%;  
+    }
+    .info .p1 {
+        margin-top: 20rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .figure-img {
+        position: absolute;
+        top: 5%;
+        height: 16rem;
+        width: 16rem;
+    }
+    .calzone-img {
+        left: 1%;  
+    }
+    .chef-img {
+        right: 1%;  
+    }
+    .info .p1 {
+        width: 35%;
+        margin-top: 0;
+        margin: 2rem auto;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .figure-img {
+        width: 20vw;
+        height: 20vw;
+    }
+    .info .p2 {
+        width: 35%;
+        margin: 2rem auto;
+    }
+}
+

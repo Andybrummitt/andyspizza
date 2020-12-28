@@ -1,0 +1,82 @@
+#find-us {
+    position: relative;
+    margin-top: 1rem;
+}
+
+#find-us * {
+    margin-top: 1rem;
+}
+
+.find-us-container {
+    width: 90%;
+    margin: auto;
+    @include flexCenter(column);
+    padding: 0.5rem;
+}
+
+.find-us-container > * {
+    min-width: 250px;
+    flex-grow: 1;
+}
+
+#find-us h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    width: 85%;
+    margin: auto;
+    border-bottom: 1px dotted #333;
+}
+
+.iframe-container {
+    
+    height: 220px;
+    width: 220px;
+    max-height: 500px;
+    max-width: 700px;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+
+.address h4 {
+    text-align: center;
+}
+
+.location-info .info-group {
+    @include flexCenter(row);
+    padding: 1rem;
+    margin-top: 0rem !important;
+}
+
+.location-info .info-group:not(:last-child) {
+    border-bottom: 1px dotted #333;
+}
+
+.location-info .info-group h4 {
+    flex: 80%;
+}
+
+.location-info .info-group i {
+    flex: 20%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+    .find-us-container {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .find-us-container > * {
+        flex: 1;
+        margin: 2rem;
+    }
+    .address {
+        text-align: center;
+    }
+}
