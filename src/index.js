@@ -1,5 +1,3 @@
-// import './hbFunctionality.js';
-// import './formValidation.js';
-// import './modal-functionality.js';
-
-console.log('cunt')
+import './hbFunctionality.js';
+import './formValidation.js';
+import './modal-functionality.js';
