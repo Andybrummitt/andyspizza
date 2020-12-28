@@ -5,8 +5,8 @@ const ejs = require('ejs');
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
 const bookingsRouter = require('./routes/bookings');
+const port = process.env.PORT || 80
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -36,5 +36,5 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at {port}`)
 })
