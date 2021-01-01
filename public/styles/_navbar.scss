@@ -104,7 +104,7 @@
         width: 100%;
     }
     .navbar-main ul a:hover {
-        background: linear-gradient(to left, $flag-green 0, $flag-green 33.3%, $flag-white 33.3%, $flag-white 66.6%, $flag-red 66.6%, $flag-red )no-repeat;
+        background: linear-gradient(to right, $flag-green 0, $flag-green 33.3%, $flag-white 33.3%, $flag-white 66.6%, $flag-red 66.6%, $flag-red )no-repeat;
         background-size: 80% 5px;
         background-position: center bottom;
         padding-bottom: 1rem;
