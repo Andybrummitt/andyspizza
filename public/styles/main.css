@@ -237,8 +237,8 @@ html, body {
     width: 100%;
   }
   .navbar-main ul a:hover {
-    background: -webkit-gradient(linear, right top, left top, color-stop(0, #008C45), color-stop(33.3%, #008C45), color-stop(33.3%, #f4f5f0), color-stop(66.6%, #f4f5f0), color-stop(66.6%, #cd212a), to(#cd212a)) no-repeat;
-    background: linear-gradient(to left, #008C45 0, #008C45 33.3%, #f4f5f0 33.3%, #f4f5f0 66.6%, #cd212a 66.6%, #cd212a) no-repeat;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #008C45), color-stop(33.3%, #008C45), color-stop(33.3%, #f4f5f0), color-stop(66.6%, #f4f5f0), color-stop(66.6%, #cd212a), to(#cd212a)) no-repeat;
+    background: linear-gradient(to right, #008C45 0, #008C45 33.3%, #f4f5f0 33.3%, #f4f5f0 66.6%, #cd212a 66.6%, #cd212a) no-repeat;
     background-size: 80% 5px;
     background-position: center bottom;
     padding-bottom: 1rem;
