@@ -1,4 +1,5 @@
-# andyspizza
-Website for fake Italian restaurant company
+Project Information
 
-This is a small website I made with vanilla JS, node and SASS. It is also the first project that I have used webpack with just to bundle my js modules.
+A mock restaurant website. Built with HTML, CSS and JS on the front end and Node Express on the backend with EJS templating. Bundled with Webpack and hosted on Heroku.
+
+https://github.com/Andybrummitt/andyspizza
